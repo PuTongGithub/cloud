@@ -1,0 +1,13 @@
+spring:
+  cloud:
+    config:
+      name: producer
+      profile: prod
+      label: master
+      discovery:
+        enabled: true
+        service-id: cloud-config
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7000/eureka/
