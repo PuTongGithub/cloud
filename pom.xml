@@ -24,12 +24,10 @@
 
 	<modules>
 		<module>cloud-eureka</module>
-		<module>cloud-server-a</module>
 		<module>cloud-producer</module>
 		<module>cloud-consumer</module>
 		<module>cloud-producer-backup</module>
 		<module>cloud-config</module>
-		<module>cloud-gatway</module>
 		<module>cloud-gateway</module>
 		<module>cloud-zuul</module>
 	</modules>

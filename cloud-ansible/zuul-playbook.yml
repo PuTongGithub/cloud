@@ -1,0 +1,18 @@
+---
+- hosts: CloudServers
+  remote_user: root
+  tasks:
+    - name: Create directory
+      file: 
+        path: /home/jars/cloud-zuul
+        state: directory
+    - name: Transferring sh file
+      copy:
+        src: /mnt/c/Users/28254/Documents/code/blobs/cloud/cloud-ansible/start-jar.sh
+        dest: /home/jars/
+    - name: Transferring jar file
+      copy: 
+        src: /mnt/c/Users/28254/Documents/code/blobs/cloud/cloud-zuul/target/cloud-zuul-0.0.1-SNAPSHOT.jar
+        dest: /home/jars/cloud-zuul
+    - name: Restart server
+      shell: sh /home/jars/start-jar.sh /home/jars/cloud-zuul/ cloud-zuul-0.0.1-SNAPSHOT.jar
